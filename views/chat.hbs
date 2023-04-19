@@ -1,0 +1,41 @@
+<header>
+    <div class="header--userInfo">
+        <button class="header--backBtn" aria-label="Back button"></button>
+        <img src="https://unsplash.it/200/200" alt="user profile image">
+        <div>
+            <h1>Group</h1>
+            <p>name, name, name</p>
+        </div>
+    </div>
+    <div class="header--functions">
+        <button type="button" class="header--videoBtn" aria-label="Video chat"></button>
+        <button type="button" class="header--callBtn" aria-label="Call"></button>
+        <button type="button" class="header--settingsBtn" aria-label="settings"></button>
+    </div>
+</header>
+
+{{> cameraOverlay}}
+
+<form id="usernameForm" action="/chat">
+
+    <label for="usernameInput">Username</label>
+    <input type="text" name="usernameInput" id="usernameInput" placeholder="Enter your username" required>
+
+    <button type="submit">Join</button>
+</form>
+
+<main>
+    <ul class="chat">
+        <li class="receivedText">demo text</li>
+        <li class="sentText">wowie</li>
+        <li class="sentText">wowieasdasds</li>
+    </ul>
+    <form class="textInput">
+        <div>
+            <button class="textInput--emojiBtn" aria-label="emoji's"></button>
+            <textarea aria-label="message text input" class="chatInput" type="textarea" autocomplete="off"></textarea>
+            <button class="textInput--attachmentsBtn" aria-label="attachments"></button>
+        </div>
+        <button class="textInput--sendBtn" aria-label="send"></button>
+    </form>
+</main>
