@@ -4,6 +4,7 @@ import http from 'http';
 import path from 'path';
 import router from './router/router.js';
 import session from 'express-session';
+import fs from 'fs';
 
 const sessionLength = (1000 * 60 * 60 * 24) * 7; // 1 day
 
@@ -60,6 +61,15 @@ io.on('connection', (socket) => {
       username: chatUsername,
       isFromSelf,
       senderId })
+  })
+
+  socket.on('image', (data) => {
+    // fs.readFile('path/to/image', (err, data) => {
+    //   if (err) throw err;
+    //   socket.emit('image', { buffer: data })
+    // })
+    console.log("image received")
+    socket.broadcast.emit('image', { data: data.data })
   })
 
   socket.on('disconnect', () => {
