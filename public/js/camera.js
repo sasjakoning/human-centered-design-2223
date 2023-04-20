@@ -48,8 +48,7 @@ async function handleCamera(socket) {
         cameraOverlay.appendChild(retryBtn);
 
         confirmBtn.addEventListener("click", () => {    
-            // do stuff
-
+            // Convert the canvas to an image and send it to the server
             const image = canvas.toDataURL();
             socket.emit('image', { data: image })
         });
