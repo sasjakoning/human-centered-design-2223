@@ -1,6 +1,6 @@
 import camera from "./camera.js";
 
-// camera.handleCamera();
+let socket = io();
 
 const emojiBtn = document.querySelector(".textInput--emojiBtn");
 const cameraOverlay = document.querySelector(".cameraOverlay");
@@ -8,21 +8,30 @@ const cameraOverlay = document.querySelector(".cameraOverlay");
 emojiBtn.addEventListener("click", () => {
     if(cameraOverlay.classList.contains("hidden")){
         cameraOverlay.classList.remove("hidden");
-        camera.handleCamera();
+        camera.handleCamera(socket);
     }else {
         cameraOverlay.classList.add("hidden");
-        camera.closeCamera();
+        camera.closeCamera(socket);
     }
 
 });
 
 
-let socket = io();
 let messages = document.querySelector(".chat");
 let input = document.querySelector(".chatInput");
 const chatForm = document.querySelector(".textInput")
 
 const usernameForm = document.querySelector("#usernameForm");
+
+// socket.emit('image');
+
+socket.on('image', (data) => {
+    const img = document.createElement('img');
+    console.log(data)
+    console.log("image received on client")
+    img.src = data.data
+    messages.appendChild(img);
+})
 
 /* ---------- set username ---------- */
 

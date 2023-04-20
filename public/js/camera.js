@@ -1,6 +1,7 @@
 
-async function handleCamera() {
+async function handleCamera(socket) {
     
+    const cameraOverlay = document.querySelector(".cameraOverlay");
     const video = document.getElementById('video');
     const canvas = document.getElementById('canvas');
     const snap = document.getElementById('snap');
@@ -34,6 +35,24 @@ async function handleCamera() {
         // Draw the video frame to the canvas
         console.log(video)
         canvas.getContext("2d").drawImage(video, 70, 0, 160, 160);
+
+        snap.remove();
+        const confirmBtn = document.createElement("button");
+        confirmBtn.classList.add("confirmBtn");
+        confirmBtn.textContent = "Confirm";
+        cameraOverlay.appendChild(confirmBtn);
+
+        const retryBtn = document.createElement("button");
+        retryBtn.classList.add("retryBtn");
+        retryBtn.textContent = "Retry";
+        cameraOverlay.appendChild(retryBtn);
+
+        confirmBtn.addEventListener("click", () => {    
+            // do stuff
+
+            const image = canvas.toDataURL();
+            socket.emit('image', { data: image })
+        });
     });
     
     // Call the init function when the window loads
