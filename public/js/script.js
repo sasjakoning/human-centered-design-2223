@@ -9,13 +9,11 @@ const emojiCanvas = document.querySelector("#canvas-emoji");
 const eyebrowsSlider = document.querySelector(".eyebrowsSlider");
 const mouthSlider = document.querySelector(".mouthSlider");
 
-// listen to slider value changes
-
-rive.riveAnimEmoji(emojiCanvas, eyebrowsSlider, mouthSlider);
 
 emojiBtn.addEventListener("click", () => {
     if(emojiOverlay.classList.contains("hidden")){
         emojiOverlay.classList.remove("hidden");
+        rive.riveAnimEmoji(emojiCanvas, eyebrowsSlider, mouthSlider);
         // camera.handleCamera(socket);
     }else {
         emojiOverlay.classList.add("hidden");

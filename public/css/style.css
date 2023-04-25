@@ -57,6 +57,11 @@ header {
     align-items: center;
 }
 
+main {
+    position: relative;
+    width: 100%;
+}
+
 .header--userInfo {
     display: flex;
     align-items: center;
@@ -269,24 +274,50 @@ header {
 /*           Camera Overlay           */
 /* ---------------------------------- */
 
-/* .hidden {
+.hidden {
     display: none !important;
-} */
+}
 
 .emojiOverlay {
-    width: calc(100% - 2rem);
+    width: calc(100% - 4rem);
+    padding: 1rem;
     margin: auto;
-    height: 40rem;
+    height: fit-content;
     background: white;
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    border-radius: 1rem;
+    margin-top: 1rem;
+
+    position: fixed;    
+    top: 3.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.emojiOverlay--btns {
+    display: flex;
+    margin-top: 1rem;
+    gap: 1rem;
+}
+
+.emojiOverlay--btns > button {
+    appearance: none;
+    border: none;
+
+    padding: 1rem;
+    background-color: var(--accent);
+    color: var(--white);
+    font-weight: bold;
+    border-radius: 1rem;
 }
 
 .animContainer {
     width: 30%;
     aspect-ratio: 1/1;
-    margin: 1rem;
+    margin-bottom: 1rem;
 }
 
 .animContainer > canvas {
