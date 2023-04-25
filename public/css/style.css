@@ -140,6 +140,7 @@ main {
     justify-content: end;
     height: calc(100% - 5rem);
     overflow: scroll;
+    padding: 0 .5rem;
 }
 
 .chat > li {
