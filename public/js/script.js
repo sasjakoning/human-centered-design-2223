@@ -1,17 +1,25 @@
-import camera from "./camera.js";
+import rive  from './rive.js';
 
 let socket = io();
 
 const emojiBtn = document.querySelector(".textInput--emojiBtn");
-const cameraOverlay = document.querySelector(".cameraOverlay");
+const emojiOverlay = document.querySelector(".emojiOverlay");
+const emojiCanvas = document.querySelector("#canvas-emoji");
+
+const eyebrowsSlider = document.querySelector(".eyebrowsSlider");
+const mouthSlider = document.querySelector(".mouthSlider");
+
+// listen to slider value changes
+
+rive.riveAnimEmoji(emojiCanvas, eyebrowsSlider, mouthSlider);
 
 emojiBtn.addEventListener("click", () => {
-    if(cameraOverlay.classList.contains("hidden")){
-        cameraOverlay.classList.remove("hidden");
-        camera.handleCamera(socket);
+    if(emojiOverlay.classList.contains("hidden")){
+        emojiOverlay.classList.remove("hidden");
+        // camera.handleCamera(socket);
     }else {
-        cameraOverlay.classList.add("hidden");
-        camera.closeCamera(socket);
+        emojiOverlay.classList.add("hidden");
+        // camera.closeCamera(socket);
     }
 
 });

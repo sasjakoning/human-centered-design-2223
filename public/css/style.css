@@ -24,6 +24,7 @@ time, mark, audio, video {
 :root {
     --dark: #017F6A;
     --light: #E6FEDA;
+    --gray: #B3B3B3;
     --background: #EFE6DF;
     --accent: #02A884;
     --white: #FFFFFF;
@@ -268,11 +269,11 @@ header {
 /*           Camera Overlay           */
 /* ---------------------------------- */
 
-.hidden {
+/* .hidden {
     display: none !important;
-}
+} */
 
-.cameraOverlay {
+.emojiOverlay {
     width: calc(100% - 2rem);
     margin: auto;
     height: 40rem;
@@ -282,23 +283,54 @@ header {
     align-items: center;
 }
 
-.cameraOverlay .cameraOverlay--video {
-    width: 10rem;
+.animContainer {
+    width: 30%;
     aspect-ratio: 1/1;
-    background-color: red;
-    border-radius: 50%;
-    position: relative;
-    overflow: hidden;
+    margin: 1rem;
 }
 
-.cameraOverlay video {
+.animContainer > canvas {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
 }
 
-/* .cameraOverlay .cameraOverlay--canvas {
+.sliders {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.sliders > .slider-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    width: 100%;
+}
+
+.sliders > .slider-container > input[type=range] {
+    width: 90%;
+    -webkit-appearance: none;
+    background: transparent;
+    height: .6rem;
+    border-radius: 1rem;
+    outline: none;
+    background: var(--gray);
+}
+
+.sliders > .slider-container > input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background: var(--accent);
+    cursor: pointer;
+}
+
+
+/* .emojiOverlay .emojiOverlay--canvas {
     width: 10rem;
     aspect-ratio: 1/1;
     background-color: red;
@@ -306,9 +338,9 @@ header {
     overflow: hidden;
 } */
 
-.cameraOverlay .cameraOverlay--video canvas {
+/* .emojiOverlay  canvas {
     width: 100%;
     height: 100%;
     object-fit: cover;
     position: absolute;
-}
+} */
