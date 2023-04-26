@@ -37,10 +37,20 @@ Eric is looking for an interface solution for conveying emotion and body languag
 
 On Thursday 20-04-2023 my assigned group held a test session with Eric. We tested a couple of prototypes and got some valuable feedback. 
 
+**Current prototype**
+<br>
+The current prototype is a simple chatroom based on the style of Whatsapp. The user can send messages and when they press the emoji button 
+
+<img src="readme-images/prototype-1.gif" width="300">
+
+<br>
+
 **Info about Eric**
+<br>
 Eric is a 50 year old man working in the field of accessibility and inclusivity. From birth he's had a defect that caused a halt in his muscle development. Due to this his fine motor skills have been limited and he has to use an electric wheelchair to move around.
 
 **Zero ground**
+<br>
 Before we showed Eric our prototypes we wanted to make sure we were on the same page. We asked him to show us how he generally uses his phone and how he chats with other people. There were some interesting things we learned from this.
 
 He is able to navigate his phone using his fingers, however, in many cases his hand will be obstructing the screen. For this reason he generally uses a small (universal) stylus. The stylus is small enough to fit in his pocket and he can use it to navigate his phone. Using his stylus he's also able to type using the regular mobile keyboard.
@@ -53,17 +63,24 @@ It also turned out he's not able to use multi-touch gestures like pinch zooming 
 
 
 **Chat preferences**
+<br>
 While chatting he's able to type relatively fast. He generally uses his stylus which means he only uses one hand to type. He sometimes uses emoji's while chatting but these are only a select few like a winky face of hearts. He feels that there are too many emoji's to choose from which confuses him when trying to find the right emoji to convey his emotions. He wishes to use a better way of conveying his emotions and body language. He also wants to be careful using certain emoji's because the way they can be interpreted can be very different from person to person.
 
 Currently his preference lies with using visual emoji's but in the past he has used a lot of text based emoji's.
 
 **Home situation**
+<br>
 At home Eric generally uses a desktop using a normal mouse and keyboard. He does however mostly type with one hand.
 
 **Prototypes**
+<br>
 Pretty early on during the test session we discovered that it's difficult for Eric to take pictures on this phone. He generally lays his phone down on a table and it takes quite some effort to lift his phone and position it to take a picture of his face.
 
 He seemed to be quite interested in using certain characters to portray emotions, for example Snapchat bitmoji. 
 
 **Future plans**
+<br>
 For the next test session I'm looking into creating a neutral emoji which can be adjusted using sliders. For example a slider for the expression of eyes, mouth, eyebrows, etc. This way Eric can create his own emoji's and use them in his chats.
+
+## Test session 2
+ 
