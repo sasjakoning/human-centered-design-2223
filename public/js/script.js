@@ -22,6 +22,18 @@ emojiBtn.addEventListener("click", () => {
 
 });
 
+const confirmEmojiBtn = document.querySelector(".emojiOverlay--confirmBtn");
+const canvasEmoji = document.querySelector(".canvas-emoji");
+
+confirmEmojiBtn.addEventListener("click", () => {
+    const chat = document.querySelector(".chat");
+    
+
+    console.log(canvasEmoji.getContext("webgl"))
+
+
+})
+
 
 let messages = document.querySelector(".chat");
 let input = document.querySelector(".chatInput");
