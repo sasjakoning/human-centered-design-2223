@@ -24,6 +24,7 @@ time, mark, audio, video {
 :root {
     --dark: #017F6A;
     --light: #E6FEDA;
+    --gray: #B3B3B3;
     --background: #EFE6DF;
     --accent: #02A884;
     --white: #FFFFFF;
@@ -54,6 +55,18 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    z-index: 10;
+}
+
+main {
+    position: relative;
+    width: 100%;
+    height: 100dvh;
 }
 
 .header--userInfo {
@@ -124,6 +137,14 @@ header {
     margin: auto;
     display: flex;
     flex-direction: column;
+    justify-content: end;
+    height: calc(100% - 5rem);
+    overflow: scroll;
+    padding: 0 .5rem;
+}
+
+.sendImage {
+    width: 50%;
 }
 
 .chat > li {
@@ -213,6 +234,11 @@ header {
     margin: auto;
     margin-bottom: .5rem;
     margin-top: .5rem;
+
+    position: fixed;
+    bottom: .5rem;
+    left: 50%;
+    transform: translate(-50%, 0);
 }
 
 .textInput > div {
@@ -272,33 +298,91 @@ header {
     display: none !important;
 }
 
-.cameraOverlay {
-    width: calc(100% - 2rem);
+.emojiOverlay {
+    width: calc(100% - 4rem);
+    padding: 1rem;
     margin: auto;
-    height: 40rem;
+    height: fit-content;
     background: white;
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    border-radius: 1rem;
+    margin-top: 1rem;
+
+    position: fixed;    
+    top: 3.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
 }
 
-.cameraOverlay .cameraOverlay--video {
-    width: 10rem;
+.emojiOverlay--btns {
+    display: flex;
+    margin-top: 1rem;
+    gap: 1rem;
+}
+
+.emojiOverlay--btns > button {
+    appearance: none;
+    border: none;
+
+    padding: 1rem;
+    background-color: var(--accent);
+    color: var(--white);
+    font-weight: bold;
+    border-radius: 1rem;
+}
+
+.animContainer {
+    width: 30%;
     aspect-ratio: 1/1;
-    background-color: red;
-    border-radius: 50%;
-    position: relative;
-    overflow: hidden;
+    margin-bottom: 1rem;
 }
 
-.cameraOverlay video {
+.animContainer > canvas {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
 }
 
-/* .cameraOverlay .cameraOverlay--canvas {
+.sliders {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.sliders > .slider-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    width: 100%;
+}
+
+.sliders > .slider-container > input[type=range] {
+    width: 90%;
+    -webkit-appearance: none;
+    background: transparent;
+    height: .6rem;
+    border-radius: 1rem;
+    outline: none;
+    background: var(--gray);
+}
+
+.sliders > .slider-container > input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background: var(--accent);
+    cursor: pointer;
+}
+
+
+/* .emojiOverlay .emojiOverlay--canvas {
     width: 10rem;
     aspect-ratio: 1/1;
     background-color: red;
@@ -306,9 +390,9 @@ header {
     overflow: hidden;
 } */
 
-.cameraOverlay .cameraOverlay--video canvas {
+/* .emojiOverlay  canvas {
     width: 100%;
     height: 100%;
     object-fit: cover;
     position: absolute;
-}
+} */

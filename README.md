@@ -61,9 +61,22 @@ Eric wants to be able to convey his emotions and body language in chat rooms. He
 <p>Eric is a 50 year old man working in the field of accessibility and inclusivity. From birth he's had a defect that caused a halt in his muscle development. Due to this his fine motor skills have been limited and he has to use an electric wheelchair to move around.
 </p>
 
+**Current prototype**
+<br>
+The current prototype is a simple chatroom based on the style of Whatsapp. The user can send messages and when they press the emoji button 
+
+<img src="readme-images/prototype-1.gif" width="300">
+
 <br>
 
-<h3>Zero ground</h3>
+**Info about Eric**
+<br>
+Eric is a 50 year old man working in the field of accessibility and inclusivity. From birth he's had a defect that caused a halt in his muscle development. Due to this his fine motor skills have been limited and he has to use an electric wheelchair to move around.
+
+**Zero ground**
+<br>
+Before we showed Eric our prototypes we wanted to make sure we were on the same page. We asked him to show us how he generally uses his phone and how he chats with other people. There were some interesting things we learned from this.
+
 
 <p>Before we showed Eric our prototypes we wanted to make sure we were on the same page. We asked him to show us how he generally uses his phone and how he chats with other people. There were some interesting things we learned from this.
 </p>
@@ -88,7 +101,10 @@ It also turned out he's not able to use multi-touch gestures like pinch zooming 
 <p>Currently his preference lies with using visual emoji's but in the past he has used a lot of text based emoji's.
 </p>
 
+**Chat preferences**
 <br>
+While chatting he's able to type relatively fast. He generally uses his stylus which means he only uses one hand to type. He sometimes uses emoji's while chatting but these are only a select few like a winky face of hearts. He feels that there are too many emoji's to choose from which confuses him when trying to find the right emoji to convey his emotions. He wishes to use a better way of conveying his emotions and body language. He also wants to be careful using certain emoji's because the way they can be interpreted can be very different from person to person.
+
 
 <h3>Home situation</h3>
 

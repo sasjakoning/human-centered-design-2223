@@ -1,20 +1,47 @@
-import camera from "./camera.js";
+import rive  from './rive.js';
 
 let socket = io();
 
 const emojiBtn = document.querySelector(".textInput--emojiBtn");
-const cameraOverlay = document.querySelector(".cameraOverlay");
+const emojiOverlay = document.querySelector(".emojiOverlay");
+const emojiCanvas = document.querySelector("#canvas-emoji");
+
+const eyebrowsSlider = document.querySelector(".eyebrowsSlider");
+const mouthSlider = document.querySelector(".mouthSlider");
+
 
 emojiBtn.addEventListener("click", () => {
-    if(cameraOverlay.classList.contains("hidden")){
-        cameraOverlay.classList.remove("hidden");
-        camera.handleCamera(socket);
+    if(emojiOverlay.classList.contains("hidden")){
+        emojiOverlay.classList.remove("hidden");
+        rive.riveAnimEmoji(emojiCanvas, eyebrowsSlider, mouthSlider);
+        // camera.handleCamera(socket);
     }else {
-        cameraOverlay.classList.add("hidden");
-        camera.closeCamera(socket);
+        emojiOverlay.classList.add("hidden");
+        // camera.closeCamera(socket);
     }
 
 });
+
+const confirmEmojiBtn = document.querySelector(".emojiOverlay--confirmBtn");
+const canvasEmoji = document.querySelector(".canvas-emoji");
+
+confirmEmojiBtn.addEventListener("click", () => {
+    emojiOverlay.classList.add("hidden");
+    const chat = document.querySelector(".chat");
+
+    const img = document.createElement("img")
+    img.src = "images/emoji.png"
+
+    const listItem = document.createElement("li");
+    listItem.classList.add("sendImage")
+    listItem.appendChild(img)
+    chat.appendChild(listItem)
+
+
+    // console.log(canvasEmoji.getImageData())
+
+
+})
 
 
 let messages = document.querySelector(".chat");
