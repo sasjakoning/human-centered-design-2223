@@ -143,6 +143,10 @@ main {
     padding: 0 .5rem;
 }
 
+.sendImage {
+    width: 50%;
+}
+
 .chat > li {
     max-width: 80%;
     padding: .5rem 1rem;

@@ -26,10 +26,19 @@ const confirmEmojiBtn = document.querySelector(".emojiOverlay--confirmBtn");
 const canvasEmoji = document.querySelector(".canvas-emoji");
 
 confirmEmojiBtn.addEventListener("click", () => {
+    emojiOverlay.classList.add("hidden");
     const chat = document.querySelector(".chat");
-    
 
-    console.log(canvasEmoji.getContext("webgl"))
+    const img = document.createElement("img")
+    img.src = "images/emoji.png"
+
+    const listItem = document.createElement("li");
+    listItem.classList.add("sendImage")
+    listItem.appendChild(img)
+    chat.appendChild(listItem)
+
+
+    // console.log(canvasEmoji.getImageData())
 
 
 })
