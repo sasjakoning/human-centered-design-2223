@@ -23,16 +23,6 @@ const chatForm = document.querySelector(".textInput")
 
 const usernameForm = document.querySelector("#usernameForm");
 
-// socket.emit('image');
-
-socket.on('image', (data) => {
-    const img = document.createElement('img');
-    console.log(data)
-    console.log("image received on client")
-    img.src = data.data
-    messages.appendChild(img);
-})
-
 /* ---------- set username ---------- */
 
 if(usernameForm) {
@@ -67,6 +57,20 @@ if (chatForm){
         input.value = "";
       }
     });
+
+    socket.on('image', (data) => {
+        // append recieved image to DOM
+        const listItem = document.createElement("li");
+        const img = document.createElement('img');
+        console.log(data)
+        console.log("image received on client")
+        img.src = data.data
+        listItem.appendChild(img)
+        messages.appendChild(
+            // create a new li element
+            Object.assign(listItem)
+        );
+    })
     
     socket.on("chatMessage", (data) => {
         console.log(data)
