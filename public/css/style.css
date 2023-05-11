@@ -339,12 +339,14 @@ main {
 .animContainer {
     height: 100%;
     aspect-ratio: 1/1;
-    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
     flex-grow: 1;
 }
 
 .animContainer > canvas {
     height: 100%;
+    margin-left: 2rem;
 }
 
 .sliders {
