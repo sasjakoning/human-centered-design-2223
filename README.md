@@ -202,6 +202,8 @@ He seemed to be quite interested in using certain characters to portray emotions
 
 <!-- show final here -->
 
+<img src="readme-images/final-prototype.gif" width="300">
+
 
 ## Exclusive design principles
 
