@@ -27,7 +27,48 @@ function riveAnimEmoji(canvas, eyebrows, mouth, color, neutral, happy, angry) {
           color.parentNode.classList.add("hidden");
         }
 
-        neutralBool.value = true;
+        neutralBool.value = false;
+        happyBool.value = false;
+        angryBool.value = false;
+
+        setTimeout(() => {
+          neutralBool.value = true;
+          defaultMouthInput.value = 40;
+        }, 10);
+
+        setTimeout(() => {
+          neutralBool.value = false;
+          happyBool.value = false;
+          angryBool.value = false;
+          defaultBool.value = true;
+        }, 20);
+
+        const radioDefault = document.querySelector("#emoji-neutral");
+
+        radioDefault.addEventListener("change", () => {
+          if(radioDefault.checked){
+            console.log("default checked")
+
+            if(!color.parentNode.classList.contains("hidden")){
+              color.parentNode.classList.add("hidden");
+            }
+
+            neutralBool.value = false;
+            happyBool.value = false;
+            angryBool.value = false;
+
+            setTimeout(() => {
+              neutralBool.value = true;
+            }, 10);
+
+            setTimeout(() => {
+              neutralBool.value = false;
+              happyBool.value = false;
+              angryBool.value = false;
+              defaultBool.value = true;
+            }, 20);
+          }
+        })
 
         const radioHappy = document.querySelector("#emoji-happy");
 
@@ -85,35 +126,6 @@ function riveAnimEmoji(canvas, eyebrows, mouth, color, neutral, happy, angry) {
             }, 20);
           }
         })
-
-        const radioDefault = document.querySelector("#emoji-neutral");
-
-        radioDefault.addEventListener("change", () => {
-          if(radioDefault.checked){
-            console.log("default checked")
-
-            if(!color.parentNode.classList.contains("hidden")){
-              color.parentNode.classList.add("hidden");
-            }
-
-            neutralBool.value = false;
-            happyBool.value = false;
-            angryBool.value = false;
-
-            setTimeout(() => {
-              neutralBool.value = true;
-            }, 10);
-
-            setTimeout(() => {
-              neutralBool.value = false;
-              happyBool.value = false;
-              angryBool.value = false;
-              defaultBool.value = true;
-            }, 20);
-          }
-        })
-
-
 
 
 
