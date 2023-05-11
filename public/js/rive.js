@@ -21,108 +21,112 @@ function riveAnimEmoji(canvas, eyebrows, mouth, color, neutral, happy, angry) {
         const defaultBool = inputs.find((i) => i.name === "DEFAULT");
         const happyBool = inputs.find((i) => i.name === "HAPPY");
         const angryBool = inputs.find((i) => i.name === "ANGRY");
-
-        const radioButtons = document.querySelectorAll(".emojiOverlay--emojiContainer input[type='radio']");
+        const neutralBool = inputs.find((i) => i.name === "NEUTRAL");
 
         if(!color.parentNode.classList.contains("hidden")){
           color.parentNode.classList.add("hidden");
         }
 
+        neutralBool.value = true;
 
-        radioButtons.forEach((radio) => {
-          radio.addEventListener("change", () => { 
-            if(radio.checked){
-              if(radio.value === "emoji-neutral"){
-                console.log("neutral")
-                defaultBool.value = true;
-                happyBool.value = false;
-                angryBool.value = false;
-                angryColorInput.value = 0;
-                angryEyebrowsInput.value = 0;
-                defaultEyebrowsInput.value = 0;
-                defaultMouthInput.value = 0;
-                happyMouthInput.value = 0;
-                angryMouthInput.value = 0;
+        const radioHappy = document.querySelector("#emoji-happy");
 
+        radioHappy.addEventListener("change", () => { 
+          if(radioHappy.checked){
+            console.log("happy checked")
 
-                if(!color.parentNode.classList.contains("hidden")){
-                  color.parentNode.classList.add("hidden");
-                }
-              }else if(radio.value === "emoji-happy"){
-                console.log("happy")
-                happyBool.value = true;
-                defaultBool.value = false;
-                angryBool.value = false;
-                angryColorInput.value = 0;
-
-                angryColorInput.value = 0;
-                angryEyebrowsInput.value = 0;
-                defaultEyebrowsInput.value = 0;
-                defaultMouthInput.value = 0;
-                happyMouthInput.value = 0;
-                angryMouthInput.value = 0;
-
-
-                if(!color.parentNode.classList.contains("hidden")){
-                  color.parentNode.classList.add("hidden");
-                }
-              }else if(radio.value === "emoji-angry"){
-                console.log("angry")
-                angryBool.value = true;
-                defaultBool.value = false;
-                happyBool.value = false;
-
-                angryColorInput.value = 0;
-                angryEyebrowsInput.value = 0;
-                defaultEyebrowsInput.value = 0;
-                defaultMouthInput.value = 0;
-                happyMouthInput.value = 0;
-                angryMouthInput.value = 0;
-
-
-                if(color.parentNode.classList.contains("hidden")){
-                  color.parentNode.classList.remove("hidden");
-                }
-              }
+            if(!color.parentNode.classList.contains("hidden")){
+              color.parentNode.classList.add("hidden");
             }
-          })
+
+            neutralBool.value = false;
+            defaultBool.value = false;
+            angryBool.value = false;
+
+            setTimeout(() => {
+              neutralBool.value = true;
+            }, 10);
+
+
+            setTimeout(() => {
+              neutralBool.value = false;
+              defaultBool.value = false;
+              angryBool.value = false;
+              happyBool.value = true;
+            }, 20);
+          }
+        })
+
+        const radioAngry = document.querySelector("#emoji-angry");
+
+        radioAngry.addEventListener("change", () => {
+          if(radioAngry.checked){
+            console.log("angry checked")
+
+            color.value = 0;
+
+            if(color.parentNode.classList.contains("hidden")){
+              color.parentNode.classList.remove("hidden");
+            }
+
+            neutralBool.value = false;
+            defaultBool.value = false;
+            happyBool.value = false;
+
+            setTimeout(() => {
+              neutralBool.value = true;
+            }, 10);
+            
+            setTimeout(() => {
+              neutralBool.value = false;
+              defaultBool.value = false;
+              happyBool.value = false;
+              angryBool.value = true;
+            }, 20);
+          }
+        })
+
+        const radioDefault = document.querySelector("#emoji-neutral");
+
+        radioDefault.addEventListener("change", () => {
+          if(radioDefault.checked){
+            console.log("default checked")
+
+            if(!color.parentNode.classList.contains("hidden")){
+              color.parentNode.classList.add("hidden");
+            }
+
+            neutralBool.value = false;
+            happyBool.value = false;
+            angryBool.value = false;
+
+            setTimeout(() => {
+              neutralBool.value = true;
+            }, 10);
+
+            setTimeout(() => {
+              neutralBool.value = false;
+              happyBool.value = false;
+              angryBool.value = false;
+              defaultBool.value = true;
+            }, 20);
+          }
         })
 
 
+
+
+
         eyebrows.addEventListener("input", () => {
-            if(defaultBool.value || happyBool.value){
-              console.log("default")
-              defaultEyebrowsInput.value = eyebrows.value;
-              // reset other values to 50
-              angryEyebrowsInput.value = 50;
-            }else if(angryBool.value){
-              console.log("angry")
-              angryEyebrowsInput.value = eyebrows.value;
-              // reset other values to 50
-              defaultEyebrowsInput.value = 50;
-            }
+            defaultEyebrowsInput.value = eyebrows.value;
+            angryEyebrowsInput.value = eyebrows.value;
         });
         
         mouth.addEventListener("input", () => {
-            if (defaultBool.value){
-              console.log("default")
-              defaultMouthInput.value = mouth.value;
-              // reset other values to 50
-              happyMouthInput.value = 50;
-              angryMouthInput.value = 50;
-            }else if(happyBool.value){
-              console.log("happy")
-              happyMouthInput.value = mouth.value;
-              // reset other values to 50
-              defaultMouthInput.value = 50;
-              angryMouthInput.value = 50;
-            }else if(angryBool.value){
-              console.log("angry")
-              angryMouthInput.value = mouth.value;
-              // reset other values to 50
-              defaultMouthInput.value = 50;
-              happyMouthInput.value = 50;
-            }
+          console.log("mouth")
+            defaultMouthInput.value = mouth.value;
+            happyMouthInput.value = mouth.value;
+            angryMouthInput.value = mouth.value;
         });
 
         color.addEventListener("input", () => {
