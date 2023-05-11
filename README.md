@@ -27,7 +27,7 @@ I created a demo for a chat app (looking similar to Whatsapp) that allows Eric t
 
 ## Demo
 
-The demo can be found [here](https://human-centered-design.up.railway.app/).
+The demo can be found [here](https://human-centered-design.up.railway.app/)(Made for mobile formats).
 
 <br>
 <hr>
@@ -130,8 +130,9 @@ The current prototype is a simple chatroom based on the style of Whatsapp. The u
 <p>Eric is a 50 year old man working in the field of accessibility and inclusivity. From birth he's had a defect that caused a halt in his muscle development. Due to this his fine motor skills have been limited and he has to use an electric wheelchair to move around.
 </p>
 
-<h3>Zero Ground</h3>
 <br>
+
+<h3>Zero Ground</h3>
 
 <p>Before we showed Eric our prototypes we wanted to make sure we were on the same page. We asked him to show us how he generally uses his phone and how he chats with other people. There were some interesting things we learned from this.
 </p>
