@@ -11,7 +11,7 @@
 
 <br>
 
-## problem statement
+## Problem Statement
 
 Eric lacks fine motor skills and uses an electric wheelchair. Due to his disability he is not able to use all body language like most people do. He wants to be able to express his emotions and body language in chat apps in a way that is easy for him to do. Eric generally prefers using his phone with a stylus and one hand. This means that he is not able to use multi-touch gestures like pinch zooming on an image very well.
 
