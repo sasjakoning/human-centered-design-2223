@@ -27,7 +27,7 @@ I created a demo for a chat app (looking similar to Whatsapp) that allows Eric t
 
 ## Demo
 
-The demo can be found [here](https://human-centered-design.up.railway.app/)(Made for mobile formats).
+The demo can be found [here](https://human-centered-design.up.railway.app/) (Made for mobile formats).
 
 <br>
 <hr>
