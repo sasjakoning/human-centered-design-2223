@@ -37,17 +37,24 @@ The demo can be found [here](https://human-centered-design.up.railway.app/) (Mad
 
 ## Table of contents
 
-- [Introduction](#introduction)
-- [Learning Objectives](#learning-objectives)
-- [Assignment](#assignment)
-  * [Criteria](#criteria)
-- [User scenario](#user-scenario)
-- [Test session 1](#test-session-1)
-- [Test session 2](#test-session-2)
-- [Final prototype](#final-prototype)
-- [Exclusive design principles](#exclusive-design-principles)
-- [Conclusion / Reflection](#conclusion---reflection)
-- [Sources](#sources)
+- [Personalized Emoji's in chat apps](#personalized-emojis-in-chat-apps)
+  - [Research Question](#research-question)
+  - [Problem Statement](#problem-statement)
+  - [Solution](#solution)
+  - [Demo](#demo)
+- [Documentation](#documentation)
+  - [Table of contents](#table-of-contents)
+  - [Introduction](#introduction)
+  - [Learning Objectives](#learning-objectives)
+  - [Assignment](#assignment)
+    - [Criteria](#criteria)
+  - [User scenario](#user-scenario)
+  - [Test session 1](#test-session-1)
+  - [Test session 2](#test-session-2)
+  - [Final prototype](#final-prototype)
+  - [Exclusive design principles](#exclusive-design-principles)
+  - [Conclusion / Reflection](#conclusion--reflection)
+  - [Sources](#sources)
 
 <br>
 
@@ -122,6 +129,23 @@ The current prototype is a simple chatroom based on the style of Whatsapp. The u
 <br>
 
 <img src="readme-images/prototype-1.gif" width="300">
+
+<br>
+
+<h3>Test plan</h3>
+<p>To make sure I know what I wanted to know and how to ask and test it, I made a test plan together with a fellow student.</p>
+
+<ul>
+    <li>Why do you wish to express yourself better or stronger in chat apps?</li>
+    <li>How do you currently use chat apps? Is usage easy of difficult?</li>
+    <li>What is it you're looking for?</li>
+    <li>How do you experience taking a photo? And a photo of yourself? Could you show us?</li>
+    <li>Have you set your phone to use bigger buttons for ease of use you do you use the default?</li>
+</ul>
+
+<p>We also asked Eric to perform a few small tasks on his phone like sending messages, taking pictures and doing multi-touch gestures so we could better understand how he uses a phone.</p>
+
+<p>To lead Eric through my prototype I set up a scenario for him to act through. I asked him to imagine he is using Whatsapp as he normally would, and he would like to send an emoji to someone.</p>
 
 <br>
 
@@ -208,6 +232,24 @@ He seemed to be quite interested in using certain characters to portray emotions
 </p>
 <br>
 <img src="readme-images/prototype-2.gif" width="300">
+
+<br>
+
+<h3>Test plan</h3>
+<p>I again had set up a small test plan.</p>
+
+<p>I asked Eric to imagine he is using Whatsapp like he usually would and to send an emoji to the chat.</p>
+
+<p>In advance I wrote down a couple of questions I wanted to ask Eric about the prototype</p>
+
+<ul>
+    <li>When you open the emoji interface, does usage feel natural?</li>
+    <li>Are buttons styled in a way that you can use them well with your hand or stylus?</li>
+    <li>Do you wish to have more expressions and sliders in the interface?</li>
+    <li>Is everything behaving as you would expect?</li>
+    <li>Does a solution like this satisfy your need?</li>
+</ul>
+
 
 <br>
 
