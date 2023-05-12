@@ -358,6 +358,8 @@ I am generally quite happy with how this project went. I found it incredibly int
 
 Designing with inclusively in mind is something that has been scratching the back of my mind for a while now. I've always been interested in the topic but I never really knew how to approach it. This project has given me a lot of insight into how to design inclusively by designing exclusively.
 
+During this project I learned several new things when it comes to testing. It's important to have a clear plan of what to ask and do ahead of time and to have a clear goal in mind. This way you can make sure you get the most out of the test session. It's also important to make sure the test person is comfortable and knows what to do.
+
 There are a couple of things I would have liked to add to the prototype but I didn't have the time to do so. I would have loved to add move fun interactions and animations to add more nonsense and create a fun experience for Eric. I would have done this by adding animations to the emoji when the sliders are adjusted. I would have also liked to have more test sessions with Eric to better fine-tune the balance between too many and too little sliders.
 
 Another feature that I would have liked to add is a way save an emoji. This would allow Eric to save emoji's he likes and use them later. I would have done this by adding a way to save the emoji to a list and then load them later.
